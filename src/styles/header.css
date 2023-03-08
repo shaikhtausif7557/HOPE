@@ -1,0 +1,90 @@
+.header {
+    position: fixed;
+    display: flex;
+    height: 60px;
+    width: 100vw;
+    background-color: #B5E6B8;
+    font-family: 'Exo 2', sans-serif;
+    font-size: small;
+    
+  }
+  
+  .header>div {
+    padding: 12px;
+  }
+  
+  .header__logo {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-left: 0px;
+  }
+  
+  .header__logo>img {
+    height: 100%;
+    object-fit: contain;
+    margin-left: 50px;
+  }
+  
+  .header__logo>span {
+    color: black;
+    font-size: 18px;
+    font-weight: 500;
+  }
+  
+  .list {
+    display: flex;
+    align-items: center;
+    margin-right: -30px;
+  }
+  
+  .icons{
+    display: flex;
+    align-items: center;
+    margin-right: 30px;
+    margin-left: 470px;
+  }
+  
+  .icons .MuiSvgIcon-root {
+    font-size: 28px;
+    color: black;
+    margin: 4px;
+  }
+  .icons .MuiSvgIcon-root:hover{
+    color: white;
+  }
+  
+  
+  .icons>img{
+    border-radius: 50%;
+    height: 100%;
+    object-fit: contain;
+    margin-left: 5px;
+  }
+  .navitems{
+    margin-left: 10px;
+    font-weight: 500;
+    margin-right: 10px;
+    color:black;
+  }
+  .navitems:hover{
+    color: white;
+  }
+  .navitem4{
+    margin-left: 15px;
+    margin-right: 2px;
+    font-weight: 500;
+    color: black;
+  }
+  .navitem4:hover{
+    color: white;
+  }
+  .navitem3{
+    margin-left: 10px;
+    margin-right: 2px;
+    font-weight: 500;
+    color: black;
+  }
+  .navitem3:hover{
+    color: white;
+  }
