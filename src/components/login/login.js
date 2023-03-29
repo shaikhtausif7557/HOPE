@@ -1,72 +1,57 @@
-import { useState } from "react";
-import "./login.css";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faUser, faLock } from "@fortawesome/free-solid-svg-icons";
+import React from 'react';
+import * as mdb from 'mdb-ui-kit'; // lib
+import { Input } from 'mdb-ui-kit'; // module
+import "../login/login.css"
+
+import { useNavigate } from 'react-router-dom';
+
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput
+}
+from 'mdb-react-ui-kit';
 
 function LoginPage() {
-  const [username, setUsername] = useState("");
-  const [password, setPassword] = useState("");
-
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // code for login functionality
-  };
-
+  const navigate = useNavigate()
   return (
-    <div className="container">
-      <div className="row justify-content-center mt-5">
-        <div className="col-md-6">
-          <div className="card">
-            <div className="card-header text-center">
-              <h4>Login</h4>
-            </div>
-            <div className="card-body">
-              <form onSubmit={handleSubmit}>
-                <div className="form-group">
-                  <label htmlFor="username">Username</label>
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        {/* <FontAwesomeIcon icon={faUser} /> */}
-                      </span>
-                    </div>
-                    <input
-                      type="text"
-                      className="form-control"
-                      id="username"
-                      value={username}
-                      onChange={(e) => setUsername(e.target.value)}
-                      required
-                    />
-                  </div>
-                </div>
-                <div className="form-group">
-                  <label htmlFor="password">Password</label>
-                  <div className="input-group">
-                    <div className="input-group-prepend">
-                      <span className="input-group-text">
-                        {/* <FontAwesomeIcon icon={faLock} /> */}
-                      </span>
-                    </div>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="password"
-                      value={password}
-                      onChange={(e) => setPassword(e.target.value)}
-                      required
-                    />
-                  </div>
-                </div>
-                <button type="submit" className="btn btn-primary btn-block">
-                  Login
-                </button>
-              </form>
-            </div>
+    <MDBContainer fluid>
+      <MDBRow>
+
+        <MDBCol sm='6'>
+
+          <div className='d-flex flex-row ps-5 pt-5'>
+            <span className="h1 fw-bold mb-0" style={{color:'#3265B9'}}>HOPE</span>
           </div>
-        </div>
-      </div>
-    </div>
+
+          <div className='d-flex flex-column justify-content-center h-custom-2 w-75 pt-4'>
+
+            <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Log In</h3>
+
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+
+            <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg' style={{background:'#3265B9'}}>Login</MDBBtn>
+            <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p>
+            <p className='ms-5'>Don't have an account? <a href="#!" class="link-info" onClick={() => {
+      navigate('/signup');
+    }} style={{color:'#3265B9'}}>Register here</a></p>
+
+          </div>
+
+        </MDBCol>
+
+        <MDBCol sm='6' className='d-none d-sm-block px-0'>
+          <img src="https://img.freepik.com/premium-photo/helping-hand-concept-international-day-peace-support_293990-165.jpg?size=626&ext=jpg&ga=GA1.2.1810410268.1680071283&semt=sph"
+            alt="Login image" className="w-100" style={{objectFit: 'cover', objectPosition: 'left',height:"95vh"}} />
+        </MDBCol>
+
+      </MDBRow>
+
+    </MDBContainer>
   );
 }
 
