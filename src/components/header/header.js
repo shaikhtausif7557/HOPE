@@ -21,7 +21,7 @@ const Header = () => {
 
         <SearchIcon />
         <span className='navitems'>ZAKAT CALCULATOR</span>
-        {/* <span className='navitems'>ABOUT US</span> */}
+        <span className='navitems'>ABOUT US</span>
         <span className='navitems'>HOW IT WORKS</span>
         <span className='navitem3' onClick={() => {
       navigate('/login');
